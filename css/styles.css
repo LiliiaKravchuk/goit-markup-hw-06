@@ -96,18 +96,16 @@ header {
   background: #fff;
   border-bottom: 1px solid #e7e9fc;
   margin-right: 76px;
-  /* height: 24px; */
   /* with preprocessors old mode style*/
-  .colorine {
+  /* .colorine {
     color: #4d5ae5;
-  }
+  } */
 }
 
 /* without preprocessors */
-/* .header-logo-colorine {
+.header-logo > .colorine {
   color: #4d5ae5;
 }
- */
 
 .header-menu-list {
   display: flex;
@@ -115,15 +113,37 @@ header {
   justify-content: space-between;
 }
 
-.header-bottom-underline {
-  transition: text-decoration 0.5s ease-in-out;
+.header-menu-underline {
+  position: relative;
 }
 
-.header-menu-item:hover {
-  text-decoration: underline solid #404bbf 2px;
+.header-menu-link::after {
+  content: "";
   width: 100%;
-  text-underline-offset: 24px;
+  border-radius: 2px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(24px);
+  opacity: 0;
+  transition: tranform 250ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #404bbf;
 }
+
+/* .header-menu-link:is(:hover, :focus) {
+  color: #404bbf;
+} */
+
+.header-menu-link:is(:hover, :focus)::after {
+  color: #404bbf;
+  opacity: 1;
+}
+
+/* .header-menu-link:is(:hover, :focus) > .header-menu-underline {
+    padding-bottom: 20px;
+  } */
 
 .header-contacts {
   /* перемещаем в крайне правое положение то есть максимальное
@@ -139,11 +159,6 @@ header {
 }
 
 .header-contacts-item {
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus {
-  color: #404bbf;
 }
 
 .header-contacts-link {
@@ -263,7 +278,7 @@ header {
   max-width: 169px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
-  transition-property: border 0.3s easy-in-out;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 .hero-btn-blue:hover,
@@ -344,7 +359,7 @@ header {
 .team-cards-item {
   border-radius: 0 0 4px 4px;
   /* padding: 0px 0px 32px; */
-  width: calc((100%-3 * 24px) / 4);
+  width: calc((100% - 3 * 24px) / 4);
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background-image: linear-gradient(#f4f4fd, #f4f4fd);
@@ -415,7 +430,7 @@ header {
 }
 
 .portfolio-img {
-  max-width: 360px;
+  max-width: 100%;
 }
 
 .portfolio-img-cover {
@@ -482,7 +497,7 @@ header {
   text-align: left;
 
   color: var(--cloud);
-    /* color: #f4f4fd; */
+  /* color: #f4f4fd; */
   margin: 16px 0 0;
   font-family: Roboto;
   font-weight: normal;
