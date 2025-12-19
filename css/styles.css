@@ -108,7 +108,8 @@ header {
 }
 
 .header-menu-list {
-  display: flex;
+  display: none;
+  /* display: flex; */
   width: 261px;
   justify-content: space-between;
 }
@@ -152,7 +153,8 @@ header {
 }
 
 .header-contacts-list {
-  display: flex;
+  /* display: flex; */
+  display: none;
   margin-left: auto;
   align-items: center;
   gap: 40px;
@@ -175,6 +177,23 @@ header {
 
 .header-contacts-link:is(:hover, :focus) {
   color: #31d0aa;
+}
+
+.mob-menu {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .visually-hidden {
