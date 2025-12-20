@@ -31,6 +31,9 @@
           <a class="header-logo" href="./index.html"
             ><span class="colorine">WEB</span>STUDIO</a
           >
+          <div class="mob-menu-img">
+            <img src="images/heroicons-solid_menu.jpg" alt="mob-menu-img" />
+          </div>
           <ul class="header-menu-list">
             <li class="header-menu-item">
               <div class="header-menu-underline">
@@ -301,6 +304,7 @@
           </ul>
         </div>
       </section>
+
       <section id="portfolio" class="portfolio">
         <div class="container">
           <h2 class="portfolio-title section-title-basic">Our Portfolio</h2>
@@ -446,8 +450,9 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
-      <section class="footer-menu">
+      <section class="footer-menu container">
         <div class="footer-common-section">
           <h2 class="visually-hidden">Footer</h2>
           <a class="footer-title" href="./index.html"
@@ -483,13 +488,31 @@
             </div>
           </div>
         </div>
+        <div class="footer-subscribe-form">
+        <p class="footer-modal-title">Subscribe</p>
+          <form class="footer-modal-form">
+            <div>
+              <label for="user-email" class="modal-input-label">Email</label>
+              <div class="footer-input-wrapper">
+                <input
+                  type="email"
+                  class="footer-modal-input"
+                  name="user-email"
+                  id="user-email"
+                  required
+                />
+              </div>
+            </div>
+            <button class="footer-btn-submit" type="submit">Subscribe</button>
+          </form>
+        </div>
       </section>
     </footer>
     <div class="modal-overlay">
       <div class="modal-window">
         <button type="button" class="model-close-btn">X</button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
-        <form class="model-form">
+        <form class="modal-form">
           <div class="modal-field">
             <label for="user-name" class="modal-input-label">Name</label>
             <div class="input-wrapper">
@@ -526,7 +549,7 @@
             <label for="user-email" class="modal-input-label">Email</label>
             <div class="input-wrapper">
               <input
-                type="text"
+                type="email"
                 class="modal-input"
                 name="user-email"
                 id="user-email"
