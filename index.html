@@ -31,9 +31,6 @@
           <a class="header-logo" href="./index.html"
             ><span class="colorine">WEB</span>STUDIO</a
           >
-          <div class="mob-menu-img">
-            <img src="images/heroicons-solid_menu.jpg" alt="mob-menu-img" />
-          </div>
           <ul class="header-menu-list">
             <li class="header-menu-item">
               <div class="header-menu-underline">
@@ -68,6 +65,71 @@
             </li>
           </ul>
         </address>
+        <button class="menu-open-btn" type="button">
+            <img src="images/heroicons-solid_menu.jpg" alt="mob-menu-img" />
+          </div>
+        </button>
+      </div>
+      <!--needs to here add is-menu-open -->
+      <div class="container mob-menu">
+        <button type="button" class="mob-close-btn">X</button>
+        <ul class="mob-header-menu-list">
+          <li class="mob-header-menu-item">
+            <div class="mob-header-menu-underline">
+              <a class="mob-header-menu-link" href="">Studio</a>
+            </div>
+          </li>
+          <li class="mob-header-menu-item">
+            <div class="mob-header-menu-underline">
+              <a class="mob-header-menu-link" href="#portfolio">Portfolio</a>
+            </div>
+          </li>
+          <li class="mob-header-menu-item">
+            <div class="mob-header-menu-underline">
+              <a class="mob-header-menu-link" href="">Contacts</a>
+            </div>
+          </li>
+        </ul>
+
+        <address class="mob-header-contacts">
+          <!-- shortcut - ul>li*2>a -->
+          <ul class="mob-header-contacts-list">
+            <li class="mob-header-contacts-item">
+              <a
+                class="mob-header-contacts-link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="">
+              <a class="mob-header-contacts-link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+        <div class="mob-row-social">
+          <div class="mob-social-icons">
+            <svg class="team-icon">
+              <use href="./images/svg/sprite1.svg#icon-instagram"></use>
+            </svg>
+          </div>
+          <div class="mob-social-icons">
+            <svg class="team-icon">
+              <use href="./images/svg/sprite1.svg#icon-twitter"></use>
+            </svg>
+          </div>
+          <div class="mob-social-icons">
+            <svg class="team-icon">
+              <use href="./images/svg/sprite1.svg#icon-facebook"></use>
+            </svg>
+          </div>
+          <div class="mob-social-icons">
+            <svg class="team-icon">
+              <use href="./images/svg/sprite1.svg#icon-linkedin"></use>
+            </svg>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -489,7 +551,7 @@
           </div>
         </div>
         <div class="footer-subscribe-form">
-        <p class="footer-modal-title">Subscribe</p>
+          <p class="footer-modal-title">Subscribe</p>
           <form class="footer-modal-form">
             <div>
               <label for="user-email" class="modal-input-label">Email</label>
